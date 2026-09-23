@@ -1,0 +1,38 @@
+---
+const {
+  title = 'Fé Primitiva',
+  description = 'Estudos bíblicos segundo as Escrituras.'
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <title>{title} | Fé Primitiva</title>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <a href="/">Fé Primitiva</a>
+        <a href="/estudos-biblicos/">Estudos Bíblicos</a>
+        <a href="/metodo-interpretativo/">Método Interpretativo</a>
+        <a href="/estudos-diversos/">Estudos Diversos</a>
+        <a href="/discipulado/">Discipulado</a>
+        <a href="/sobre/">Sobre</a>
+        <a href="/fale-conosco/">Fale Conosco</a>
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer>
+      <p>© {new Date().getFullYear()} Fé Primitiva</p>
+    </footer>
+  </body>
+</html>
