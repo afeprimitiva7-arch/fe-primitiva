@@ -1,23 +1,33 @@
 ---
-const title = 'Fé Primitiva';
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
 ---
 
-<!doctype html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>{title}</title>
-    <meta
-      name="description"
-      content="Estudos bíblicos segundo as Escrituras."
-    />
-  </head>
+<Layout
+  title="Fé Primitiva"
+  description="Estudos bíblicos segundo as Escrituras."
+>
+  <section>
+    <h1>Fé Primitiva</h1>
 
-  <body>
-    <main>
-      <h1>Fé Primitiva</h1>
-      <p>Estudos bíblicos segundo as Escrituras.</p>
-    </main>
-  </body>
-</html>
+    <p>
+      Este site é resultado de uma busca contínua pelas Verdades de Deus.
+    </p>
+
+    <p>
+      Nosso propósito é estudar as Escrituras buscando compreender sua
+      mensagem com fidelidade ao texto bíblico.
+    </p>
+
+    <h2>Estudos Bíblicos</h2>
+
+    <p>
+      Explore nossos estudos sobre Deus, o Messias, o Espírito Santo,
+      as Escrituras, a salvação, o Reino e outros temas bíblicos.
+    </p>
+
+    <p>
+      <a href="/estudos-biblicos/">Conheça os Estudos Bíblicos →</a>
+    </p>
+  </section>
+</Layout>
