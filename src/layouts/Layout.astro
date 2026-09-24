@@ -9,30 +9,78 @@ const {
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
+
+    <link rel="icon" href="/favicon.svg" />
+
     <title>{title} | Fé Primitiva</title>
   </head>
 
   <body>
-    <header>
-      <nav>
-        <a href="/">Fé Primitiva</a>
-        <a href="/estudos-biblicos/">Estudos Bíblicos</a>
-        <a href="/metodo-interpretativo/">Método Interpretativo</a>
-        <a href="/estudos-diversos/">Estudos Diversos</a>
-        <a href="/discipulado/">Discipulado</a>
-        <a href="/sobre/">Sobre</a>
-        <a href="/fale-conosco/">Fale Conosco</a>
-      </nav>
+    <header class="site-header">
+      <div class="header-inner">
+
+        <a class="site-logo" href="/">
+          <span class="logo-symbol">✦</span>
+          <span class="logo-text">
+            <strong>Fé Primitiva</strong>
+            <small>Estudos das Escrituras</small>
+          </span>
+        </a>
+
+        <nav class="main-nav" aria-label="Navegação principal">
+          <a href="/">Início</a>
+
+          <a href="/estudos-biblicos/">
+            Estudos Bíblicos
+          </a>
+
+          <a href="/metodo-interpretativo/">
+            Método Interpretativo
+          </a>
+
+          <a href="/estudos-diversos/">
+            Estudos Diversos
+          </a>
+
+          <a href="/discipulado/">
+            Discipulado
+          </a>
+
+          <a href="/sobre/">
+            Sobre
+          </a>
+
+          <a href="/fale-conosco/">
+            Fale Conosco
+          </a>
+        </nav>
+
+      </div>
     </header>
 
-    <main>
+    <main class="site-main">
       <slot />
     </main>
 
-    <footer>
-      <p>© {new Date().getFullYear()} Fé Primitiva</p>
+    <footer class="site-footer">
+      <div class="footer-inner">
+
+        <div class="footer-brand">
+          <strong>Fé Primitiva</strong>
+          <p>
+            Estudos das Escrituras em busca da Verdade.
+          </p>
+        </div>
+
+        <div class="footer-line"></div>
+
+        <p class="copyright">
+          © {new Date().getFullYear()} Fé Primitiva. Todos os direitos reservados.
+        </p>
+
+      </div>
     </footer>
   </body>
 </html>
