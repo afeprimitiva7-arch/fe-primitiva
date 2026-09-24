@@ -1,47 +1,304 @@
 :root {
-  font-family: Georgia, 'Times New Roman', serif;
-  color: #222;
-  background: #f8f6f1;
+  --bg-main: #f5f1e8;
+  --bg-paper: #fbf9f4;
+  --bg-dark: #29251f;
+
+  --text-main: #332d25;
+  --text-soft: #6b6257;
+
+  --gold: #a18145;
+  --gold-light: #c3a66b;
+
+  --border: #ded5c5;
+  --border-dark: #4a4237;
+
+  --max-width: 1200px;
+
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--text-main);
+  background: var(--bg-main);
 }
 
 * {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
+  min-width: 320px;
+  background:
+    linear-gradient(
+      rgba(245, 241, 232, 0.96),
+      rgba(245, 241, 232, 0.96)
+    );
+  color: var(--text-main);
+  line-height: 1.7;
 }
 
-header {
-  padding: 1rem;
-  border-bottom: 1px solid #ddd;
-  background: #fff;
+/* ==============================
+   CABEÇALHO
+   ============================== */
+
+.site-header {
+  position: relative;
+  background: var(--bg-paper);
+  border-bottom: 1px solid var(--border);
 }
 
-nav {
-  max-width: 1200px;
+.header-inner {
+  max-width: var(--max-width);
   margin: 0 auto;
+  padding: 1rem 1.5rem;
+
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
   align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
 }
 
-nav a {
-  color: inherit;
+/* Logo */
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  color: var(--text-main);
   text-decoration: none;
+
+  flex-shrink: 0;
 }
 
-main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 3rem 1.5rem;
+.logo-symbol {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+
+  color: var(--gold);
+  font-size: 1.15rem;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.logo-text strong {
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.logo-text small {
+  margin-top: 0.25rem;
+
+  color: var(--text-soft);
+
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Menu */
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.main-nav a {
+  position: relative;
+
+  padding: 0.55rem 0.7rem;
+
+  color: var(--text-main);
+  text-decoration: none;
+
+  font-size: 0.92rem;
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.main-nav a:hover {
+  color: var(--gold);
+}
+
+.main-nav a::after {
+  content: "";
+
+  position: absolute;
+  left: 0.7rem;
+  right: 0.7rem;
+  bottom: 0.2rem;
+
+  height: 1px;
+
+  background: var(--gold);
+
+  transform: scaleX(0);
+  transform-origin: center;
+
+  transition: transform 0.2s ease;
+}
+
+.main-nav a:hover::after {
+  transform: scaleX(1);
+}
+
+/* ==============================
+   CONTEÚDO
+   ============================== */
+
+.site-main {
+  max-width: var(--max-width);
   min-height: 70vh;
+
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
 }
 
-footer {
-  padding: 2rem;
+.site-main h1,
+.site-main h2,
+.site-main h3 {
+  color: var(--text-main);
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.site-main h1 {
+  margin-top: 0;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+}
+
+.site-main h2 {
+  margin-top: 3rem;
+  font-size: 1.8rem;
+}
+
+.site-main h3 {
+  font-size: 1.3rem;
+}
+
+.site-main p {
+  max-width: 800px;
+}
+
+.site-main a {
+  color: #72572b;
+}
+
+.site-main a:hover {
+  color: var(--gold);
+}
+
+/* ==============================
+   RODAPÉ
+   ============================== */
+
+.site-footer {
+  background: var(--bg-dark);
+  color: #e9e2d5;
+
+  border-top: 1px solid var(--border-dark);
+}
+
+.footer-inner {
+  max-width: var(--max-width);
+
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+
   text-align: center;
-  border-top: 1px solid #ddd;
-  background: #fff;
+}
+
+.footer-brand strong {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.footer-brand p {
+  margin: 0.4rem 0 1.5rem;
+
+  color: #bdb4a6;
+  font-size: 0.9rem;
+}
+
+.footer-line {
+  width: 60px;
+  height: 1px;
+
+  margin: 0 auto 1.5rem;
+
+  background: var(--gold);
+}
+
+.copyright {
+  margin: 0;
+
+  color: #968d80;
+  font-size: 0.78rem;
+}
+
+/* ==============================
+   RESPONSIVO
+   ============================== */
+
+@media (max-width: 950px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .site-logo {
+    justify-content: center;
+  }
+
+  .main-nav {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 650px) {
+  .header-inner {
+    padding: 1rem;
+  }
+
+  .main-nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.2rem;
+  }
+
+  .main-nav a {
+    text-align: center;
+    font-size: 0.85rem;
+  }
+
+  .site-main {
+    padding: 2.5rem 1rem;
+  }
+
+  .logo-text strong {
+    font-size: 1.2rem;
+  }
+
+  .logo-text small {
+    font-size: 0.65rem;
+  }
 }
