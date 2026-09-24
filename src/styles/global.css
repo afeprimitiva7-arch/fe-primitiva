@@ -607,7 +607,97 @@ body {
   .study-grid {
     grid-template-columns: 1fr;
   }
+/* ==============================
+   PÁGINA DE ESTUDOS BÍBLICOS
+   ============================== */
 
+.page-intro {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 0 4rem;
+  text-align: center;
+}
+
+.page-intro .eyebrow {
+  margin-bottom: 0.75rem;
+}
+
+.page-intro h1 {
+  margin-bottom: 1.25rem;
+}
+
+.page-intro > p:last-child {
+  max-width: 650px;
+  margin: 0 auto;
+  color: var(--text-soft);
+  font-size: 1.05rem;
+}
+
+.category-section {
+  padding: 1rem 0 4rem;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.category-card {
+  position: relative;
+  display: block;
+  min-height: 145px;
+  padding: 1.75rem;
+  background: var(--bg-paper);
+  border: 1px solid var(--border);
+  color: var(--text-main) !important;
+  text-decoration: none;
+  overflow: hidden;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--gold);
+  box-shadow: 0 8px 25px rgba(60, 48, 30, 0.08);
+}
+
+.category-card span {
+  display: block;
+  margin-bottom: 1.5rem;
+  color: var(--gold);
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+}
+
+.category-card h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+@media (max-width: 850px) {
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .page-intro {
+    padding: 2rem 0 3rem;
+  }
+
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .category-card {
+    min-height: auto;
+  }
+  }
   .section-heading {
     gap: 0.75rem;
   }
