@@ -817,3 +817,102 @@ body {
     font-size: 1.1rem;
   }
 }
+/* ==============================
+   PÁGINA INDIVIDUAL DE ESTUDO
+   ============================== */
+
+.study-single {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.study-single-header {
+  padding: 2rem 0 4rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.study-single-header .eyebrow {
+  margin-bottom: 0.75rem;
+}
+
+.study-single-header h1 {
+  margin: 0;
+  font-size: clamp(2.8rem, 7vw, 4.5rem);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
+.study-single-intro {
+  max-width: 680px;
+  margin: 1.5rem auto 0;
+  color: var(--text-soft);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.study-single-content {
+  padding: 4rem 0;
+}
+
+.study-placeholder {
+  padding: 3rem;
+  background: var(--bg-paper);
+  border: 1px solid var(--border);
+  text-align: center;
+}
+
+.study-placeholder-symbol {
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  color: var(--gold);
+  font-size: 1.2rem;
+}
+
+.study-placeholder h2 {
+  margin-top: 0;
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+.study-placeholder p {
+  max-width: 650px;
+  margin: 1rem auto;
+  color: var(--text-soft);
+}
+
+.study-back {
+  padding: 2rem 0 1rem;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.study-back a {
+  color: #72572b;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.study-back a:hover {
+  color: var(--gold);
+}
+
+@media (max-width: 600px) {
+  .study-single-header {
+    padding: 1rem 0 3rem;
+  }
+
+  .study-single-content {
+    padding: 3rem 0;
+  }
+
+  .study-placeholder {
+    padding: 2rem 1.25rem;
+  }
+}
