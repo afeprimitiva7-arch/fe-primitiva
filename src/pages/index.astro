@@ -1,221 +1,325 @@
+```astro
 ---
 import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+
+import bannerInicio from '../assets/banner-inicio.jpg';
 ---
 
 <Layout
   title="A Fé Primitiva"
-  description="Estudos bíblicos em busca da compreensão das Escrituras assim como a Igreja primitiva."
+  description="Estudos bíblicos segundo as Escrituras."
 >
 
-  <!-- HERO -->
+  <main>
 
-  <section class="hero">
-
-    <div class="hero-symbol">
-      ✦
-    </div>
-
-    <p class="eyebrow">
-      ESTUDOS BÍBLICOS 
-    </p>
-
-    <h1>
-      A Fé Primitiva
-    </h1>
-
-    <p class="hero-text">
-      Uma busca pela Verdade,
-      procurando compreender as Escrituras assim como a Igreja primitiva    </p>
-
-    <a class="hero-button" href="/estudos-biblicos/">
-      Explorar os Estudos
-    </a>
-
-  </section>
+    <!-- BANNER PRINCIPAL -->
+    <section class="hero-banner">
+      <img
+        src={bannerInicio.src}
+        alt="A Fé Primitiva"
+      />
+    </section>
 
 
-  <!-- APRESENTAÇÃO -->
+    <!-- APRESENTAÇÃO -->
+    <section class="intro-section">
 
-  <section class="intro-section">
+      <div class="intro-content">
 
-    <div class="section-heading">
-      <span></span>
-      <h2>Uma busca pela Verdade</h2>
-      <span></span>
-    </div>
+        <h1>A Fé Primitiva</h1>
 
-    <div class="intro-content">
-
-      <p>
-        Este site é um produto de uma busca contínua pelas
-        <strong>Verdades de DEUS</strong>.
-      </p>
-
-      <p>
-        De forma alguma quero dizer que todos estão errados
-        e só nós os certos. Nosso propósito é compartilhar aquilo
-        que, conforme o entendimento que o Senhor nos tem concedido,
-        nos parece mais coerente com aquilo que chamamos de
-        <em>Sola Scriptura</em>, sem achismos e dispensando tradições
-        que não encontram fundamento nas Escrituras.
-      </p>
-
-      <p>
-        Nosso desejo é estudar a Palavra com sinceridade,
-        examinando seu contexto, suas palavras e sua mensagem,
-        sempre buscando compreender aquilo que as Escrituras
-        efetivamente revelam.
-      </p>
-
-      <p class="blessing">
-        Que Deus abençoe grandemente a todos aqueles que amam e buscam a Verdade!
-      </p>
-
-    </div>
-
-  </section>
-
-
-  <!-- ESTUDOS BÍBLICOS -->
-
-  <section class="studies-section">
-
-    <div class="section-heading">
-      <span></span>
-      <h2>Estudos Bíblicos</h2>
-      <span></span>
-    </div>
-
-    <p class="section-intro">
-      Conheça os principais temas estudados.
-    </p>
-
-    <div class="study-grid">
-
-      <a href="/estudos-biblicos/DEUS/" class="study-card">
-        <h3>DEUS</h3>
-        <p>O DEUS das Escrituras e sua revelação.</p>
-      </a>
-
-      <a href="/estudos-biblicos/o-messias/" class="study-card">
-        <h3>O Messias</h3>
-        <p>A identidade, missão e obra do Messias.</p>
-      </a>
-
-      <a href="/estudos-biblicos/o-espirito-santo/" class="study-card">
-        <h3>O Espírito Santo</h3>
-        <p>O Espírito de DEUS e sua atuação nas Escrituras.</p>
-      </a>
-
-      <a href="/estudos-biblicos/seres-celestiais/" class="study-card">
-        <h3>Os Seres Celestiais</h3>
-        <p>Anjos e outros seres apresentados nas Escrituras.</p>
-      </a>
-
-      <a href="/estudos-biblicos/espiritos-maus/" class="study-card">
-        <h3>Os Espíritos Maus</h3>
-        <p>O mundo espiritual e os seres malignos.</p>
-      </a>
-
-      <a href="/estudos-biblicos/homem/" class="study-card">
-        <h3>O Homem</h3>
-        <p>A natureza, condição e propósito do ser humano.</p>
-      </a>
-
-      <a href="/estudos-biblicos/pecado/" class="study-card">
-        <h3>O Pecado</h3>
-        <p>O pecado, suas consequências e sua relação com DEUS.</p>
-      </a>
-
-      <a href="/estudos-biblicos/salvacao/" class="study-card">
-        <h3>A Salvação</h3>
-        <p>A salvação apresentada na revelação bíblica.</p>
-      </a>
-
-      <a href="/estudos-biblicos/reino/" class="study-card">
-        <h3>O Reino</h3>
-        <p>O Reino de DEUS e suas promessas.</p>
-      </a>
-
-      <a href="/estudos-biblicos/alianca/" class="study-card">
-        <h3>A Aliança</h3>
-        <p>As alianças estabelecidas por DEUS nas Escrituras.</p>
-      </a>
-
-      <a href="/estudos-biblicos/escrituras/" class="study-card">
-        <h3>As Escrituras</h3>
-        <p>A Palavra de Deus e sua autoridade.</p>
-      </a>
-
-      <a href="/estudos-biblicos/povo-de-deus/" class="study-card">
-        <h3>O Povo de Deus</h3>
-        <p>A história e identidade do povo de Deus.</p>
-      </a>
-
-      <a href="/estudos-biblicos/caminho/" class="study-card">
-        <h3>O Caminho</h3>
-        <p>A vida e o caminho apresentados por Jesus e pelos apóstolos.</p>
-      </a>
-
-      <a href="/estudos-biblicos/adoracao/" class="study-card">
-        <h3>A Adoração</h3>
-        <p>A adoração a DEUS segundo as Escrituras.</p>
-      </a>
-
-      <a href="/estudos-biblicos/ultimos-dias-e-mundo-vindouro/" class="study-card">
-        <h3>Últimos Dias e Mundo Vindouro</h3>
-        <p>As promessas e acontecimentos relacionados ao futuro.</p>
-      </a>
-
-    </div>
-
-    <div class="section-action">
-      <a href="/estudos-biblicos/" class="text-button">
-        Ver todos os estudos →
-      </a>
-    </div>
-
-  </section>
-
-
-  <!-- OUTRAS ÁREAS -->
-
-  <section class="other-section">
-
-    <div class="section-heading">
-      <span></span>
-      <h2>Conheça o site</h2>
-      <span></span>
-    </div>
-
-    <div class="other-grid">
-
-      <a href="/metodo-interpretativo/" class="other-card">
-        <h3>Método Interpretativo</h3>
-        <p>
-          Conheça a forma como os estudos do Fé Primitiva
-          são desenvolvidos.
+        <p class="intro-lead">
+          Este site é fruto de uma busca contínua pelas Verdades de DEUS.
         </p>
-      </a>
 
-      <a href="/estudos-diversos/" class="other-card">
-        <h3>Estudos Diversos</h3>
         <p>
-          História da Igreja, História dos Concílios
-          e Arqueologia Bíblica.
+          Nosso propósito é estudar as Escrituras buscando compreender sua
+          mensagem dentro de seu próprio contexto, valorizando o texto bíblico
+          e evitando que tradições posteriores determinem aquilo que as
+          Escrituras dizem.
         </p>
-      </a>
 
-      <a href="/discipulado/" class="other-card">
-        <h3>Discipulado</h3>
         <p>
-          Um espaço dedicado àqueles que desejam
-          aprofundar sua caminhada de fé.
+          Não pretendemos afirmar que todos estão errados e que somente nós
+          estamos certos. Compartilhamos aquilo que, segundo o entendimento
+          que recebemos, nos parece mais coerente com o princípio de
+          <em>Sola Scriptura</em>, sem achismos e dispensando tradições.
         </p>
-      </a>
 
-    </div>
+        <p>
+          Que DEUS abençoe grandemente a todos aqueles que amam a Verdade!
+        </p>
 
-  </section>
+      </div>
+
+    </section>
+
+
+    <!-- ESTUDOS -->
+    <section class="studies-section">
+
+      <div class="section-heading">
+
+        <span class="section-symbol">✦</span>
+
+        <h2>Estudos Bíblicos</h2>
+
+        <p>
+          Conheça os principais temas que estudamos à luz das Escrituras.
+        </p>
+
+      </div>
+
+
+      <div class="study-cards">
+
+        <a href="/estudos-biblicos/deus/" class="study-card">
+          <h3>DEUS</h3>
+          <p>
+            O conhecimento de DEUS segundo as Escrituras.
+          </p>
+        </a>
+
+        <a href="/estudos-biblicos/o-messias/" class="study-card">
+          <h3>O Messias</h3>
+          <p>
+            Estudos sobre Jesus, o Messias prometido nas Escrituras.
+          </p>
+        </a>
+
+        <a href="/estudos-biblicos/o-espirito-santo/" class="study-card">
+          <h3>O Espírito Santo</h3>
+          <p>
+            O Espírito de DEUS e sua atuação segundo a Bíblia.
+          </p>
+        </a>
+
+        <a href="/estudos-biblicos/as-escrituras/" class="study-card">
+          <h3>As Escrituras</h3>
+          <p>
+            Estudos sobre a Palavra de DEUS e sua autoridade.
+          </p>
+        </a>
+
+      </div>
+
+
+      <div class="studies-link">
+        <a href="/estudos-biblicos/">
+          Ver todos os estudos →
+        </a>
+      </div>
+
+    </section>
+
+
+    <!-- MÉTODO -->
+    <section class="method-section">
+
+      <div class="method-content">
+
+        <span class="section-symbol">✦</span>
+
+        <h2>Método Interpretativo</h2>
+
+        <p>
+          Conheça os princípios utilizados no estudo e na interpretação das
+          Escrituras neste site.
+        </p>
+
+        <a href="/metodo-interpretativo/">
+          Conhecer o método →
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
 
 </Layout>
+
+
+<style>
+
+  /* =========================
+     BANNER
+  ========================= */
+
+  .hero-banner {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+
+  .hero-banner img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 1376px;
+    margin: 0 auto;
+  }
+
+
+  /* =========================
+     APRESENTAÇÃO
+  ========================= */
+
+  .intro-section {
+    padding: 70px 20px;
+  }
+
+  .intro-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .intro-content h1 {
+    margin-bottom: 25px;
+  }
+
+  .intro-content p {
+    margin: 0 auto 18px;
+    line-height: 1.8;
+  }
+
+  .intro-lead {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+
+  /* =========================
+     ESTUDOS
+  ========================= */
+
+  .studies-section {
+    padding: 70px 20px;
+  }
+
+  .section-heading {
+    max-width: 850px;
+    margin: 0 auto 40px;
+    text-align: center;
+  }
+
+  .section-symbol {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+  }
+
+  .section-heading h2 {
+    margin-bottom: 12px;
+  }
+
+  .section-heading p {
+    line-height: 1.7;
+  }
+
+  .study-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .study-card {
+    display: block;
+    padding: 28px 22px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .study-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .study-card h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+
+  .study-card p {
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .studies-link {
+    text-align: center;
+    margin-top: 35px;
+  }
+
+  .studies-link a {
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+
+  /* =========================
+     MÉTODO
+  ========================= */
+
+  .method-section {
+    padding: 70px 20px;
+    text-align: center;
+  }
+
+  .method-content {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+
+  .method-content h2 {
+    margin-bottom: 15px;
+  }
+
+  .method-content p {
+    line-height: 1.7;
+    margin-bottom: 25px;
+  }
+
+  .method-content a {
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+
+  /* =========================
+     CELULAR
+  ========================= */
+
+  @media (max-width: 900px) {
+
+    .study-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+  }
+
+  @media (max-width: 600px) {
+
+    .hero-banner img {
+      width: 100%;
+    }
+
+    .intro-section,
+    .studies-section,
+    .method-section {
+      padding: 50px 18px;
+    }
+
+    .study-cards {
+      grid-template-columns: 1fr;
+    }
+
+  }
+
+</style>
+```
