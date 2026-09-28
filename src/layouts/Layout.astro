@@ -1,4 +1,5 @@
 ---import '../styles/global.css';
+import logo from '../assets/logo.png';
 const {
   title = 'A Fé Primitiva',
   description = 'Estudos bíblicos segundo as Escrituras.'
@@ -23,7 +24,7 @@ const {
 
         <a class="site-logo" href="/" aria-label="A Fé Primitiva - Página inicial">
   <img
-    src="/assets/logo.png"
+    src={logo.src}
     alt="A Fé Primitiva"
   />
 </a>
@@ -67,7 +68,7 @@ const {
       <div class="footer-inner">
 
         <div class="footer-brand">
-          <strong>Fé Primitiva</strong>
+          <strong>A Fé Primitiva</strong>
           <p>
             Estudos das Escrituras em busca da Verdade.
           </p>
