@@ -65,51 +65,16 @@ body {
 .site-logo {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-
-  color: var(--text-main);
   text-decoration: none;
-
   flex-shrink: 0;
 }
-
-.logo-symbol {
-  width: 42px;
-  height: 42px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border: 1px solid var(--gold);
-  border-radius: 50%;
-
-  color: var(--gold);
-  font-size: 1.15rem;
+.site-logo img {
+  display: block;
+  width: 170px;
+  height: auto;
+  max-height: 60px;
+  object-fit: contain;
 }
-
-.logo-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.15;
-}
-
-.logo-text strong {
-  font-size: 1.35rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-}
-
-.logo-text small {
-  margin-top: 0.25rem;
-
-  color: var(--text-soft);
-
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
 /* Menu */
 
 .main-nav {
@@ -301,6 +266,10 @@ body {
   .logo-text small {
     font-size: 0.65rem;
   }
+@media (max-width: 700px) {
+  .site-logo img {
+    width: 145px;
+    max-height: 52px;
 }
 /* ==============================
    PÁGINA INICIAL
