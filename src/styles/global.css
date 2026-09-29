@@ -1,3 +1,4 @@
+```css
 :root {
   --bg-main: #f5f1e8;
   --bg-paper: #fbf9f4;
@@ -68,6 +69,7 @@ body {
   text-decoration: none;
   flex-shrink: 0;
 }
+
 .site-logo img {
   display: block;
   width: 170px;
@@ -75,6 +77,7 @@ body {
   max-height: 60px;
   object-fit: contain;
 }
+
 /* Menu */
 
 .main-nav {
@@ -221,7 +224,7 @@ body {
 }
 
 /* ==============================
-   RESPONSIVO
+   RESPONSIVO — CABEÇALHO
    ============================== */
 
 @media (max-width: 950px) {
@@ -236,6 +239,13 @@ body {
 
   .main-nav {
     justify-content: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .site-logo img {
+    width: 145px;
+    max-height: 52px;
   }
 }
 
@@ -266,11 +276,8 @@ body {
   .logo-text small {
     font-size: 0.65rem;
   }
-@media (max-width: 700px) {
-  .site-logo img {
-    width: 145px;
-    max-height: 52px;
 }
+
 /* ==============================
    PÁGINA INICIAL
    ============================== */
@@ -348,7 +355,6 @@ body {
   transform: translateY(-2px);
 }
 
-
 /* ==============================
    SEÇÕES
    ============================== */
@@ -395,7 +401,6 @@ body {
   color: var(--text-soft);
 }
 
-
 /* ==============================
    APRESENTAÇÃO
    ============================== */
@@ -423,7 +428,6 @@ body {
   font-style: italic;
   text-align: center;
 }
-
 
 /* ==============================
    CARDS DOS ESTUDOS
@@ -498,7 +502,6 @@ body {
   color: var(--gold) !important;
 }
 
-
 /* ==============================
    OUTRAS ÁREAS
    ============================== */
@@ -542,13 +545,11 @@ body {
   color: var(--text-soft);
 }
 
-
 /* ==============================
    RESPONSIVO — PÁGINA INICIAL
    ============================== */
 
 @media (max-width: 850px) {
-
   .study-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -556,11 +557,9 @@ body {
   .other-grid {
     grid-template-columns: 1fr;
   }
-
 }
 
 @media (max-width: 550px) {
-
   .hero {
     padding: 3.5rem 0 4rem;
   }
@@ -576,6 +575,16 @@ body {
   .study-grid {
     grid-template-columns: 1fr;
   }
+
+  .section-heading {
+    gap: 0.75rem;
+  }
+
+  .section-heading h2 {
+    font-size: 1.45rem;
+  }
+}
+
 /* ==============================
    PÁGINA DE ESTUDOS BÍBLICOS
    ============================== */
@@ -666,18 +675,10 @@ body {
   .category-card {
     min-height: auto;
   }
-  }
-  .section-heading {
-    gap: 0.75rem;
-  }
-
-  .section-heading h2 {
-    font-size: 1.45rem;
-  }
-
 }
+
 /* ==============================
-   PÁGINA DE ESTUDOS BÍBLICOS
+   LISTA DE ESTUDOS BÍBLICOS
    ============================== */
 
 .studies-page {
@@ -786,6 +787,7 @@ body {
     font-size: 1.1rem;
   }
 }
+
 /* ==============================
    PÁGINA INDIVIDUAL DE ESTUDO
    ============================== */
@@ -857,51 +859,5 @@ body {
 }
 
 .study-back {
-  padding: 2rem 0 1rem;
-  border-top: 1px solid var(--border);
-  text-align: center;
-}
-
-.study-back a {
-  color: #72572b;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.study-back a:hover {
-  color: var(--gold);
-}
-
-@media (max-width: 600px) {
-  .study-single-header {
-    padding: 1rem 0 3rem;
-  }
-
-  .study-single-content {
-    padding: 3rem 0;
-  }
-
-  .study-placeholder {
-    padding: 2rem 1.25rem;
-  }
-}
-/* Números dos Estudos Bíblicos */
-
-.study-number {
-  width: 38px;
-  height: 38px;
-  min-width: 38px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border: 1px solid var(--gold);
-  color: var(--gold);
-
-  font-size: 0.75rem;
-  letter-spacing: 0.05em;
-
-  box-sizing: border-box;
-  flex-shrink: 0;
-}
+  p
+```
