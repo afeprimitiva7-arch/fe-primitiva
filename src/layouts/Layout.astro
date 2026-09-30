@@ -1,5 +1,8 @@
----import '../styles/global.css';
+```astro
+---
+import '../styles/global.css';
 import logo from '../assets/logo.jpg';
+
 const {
   title = 'A Fé Primitiva',
   description = 'Estudos bíblicos segundo as Escrituras.'
@@ -23,37 +26,39 @@ const {
       <div class="header-inner">
 
         <a class="site-logo" href="/" aria-label="A Fé Primitiva - Página inicial">
-  <img
-    src={logo.src}
-    alt="A Fé Primitiva"
-  />
-</a>
+          <img
+            src={logo.src}
+            alt="A Fé Primitiva"
+          />
+        </a>
 
         <nav class="main-nav" aria-label="Navegação principal">
-          <a href="/">Início</a>
-
-          <a href="/estudos-biblicos/">
-             Estudos Doutrinários 
+          <a href="/">
+            Início
           </a>
 
-          <a href="/metodo-interpretativo/">
-            Entenda Nosso Método 
+          <a href="/estudos-doutrinarios/">
+            Estudos Doutrinários
           </a>
 
           <a href="/estudos-diversos/">
             Estudos Diversos
           </a>
 
-          <a href="/discipulado/">
-            Faça Parte 
+          <a href="/nosso-metodo/">
+            Nosso Método
+          </a>
+
+          <a href="/grupo-de-estudos/">
+            Faça Parte do Grupo de Estudos
           </a>
 
           <a href="/sobre/">
             Sobre
           </a>
 
-          <a href="/fale-conosco/">
-            Envie suas Dúvidas 
+          <a href="/envie-suas-duvidas/">
+            Envie suas Dúvidas
           </a>
         </nav>
 
@@ -77,10 +82,11 @@ const {
         <div class="footer-line"></div>
 
         <p class="copyright">
-          © {new Date().getFullYear()} Fé Primitiva. Todos os direitos reservados.
+          © {new Date().getFullYear()} A Fé Primitiva. Todos os direitos reservados.
         </p>
 
       </div>
     </footer>
   </body>
 </html>
+```
