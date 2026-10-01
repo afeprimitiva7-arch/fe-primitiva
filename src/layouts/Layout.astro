@@ -5,7 +5,7 @@ import logo from '../assets/logo.jpg';
 
 const {
   title = 'A Fé Primitiva',
-  description = 'Estudos bíblicos segundo as Escrituras.'
+  description = 'Estudos das Escrituras segundo a Bíblia.'
 } = Astro.props;
 ---
 
@@ -25,7 +25,11 @@ const {
     <header class="site-header">
       <div class="header-inner">
 
-        <a class="site-logo" href="/" aria-label="A Fé Primitiva - Página inicial">
+        <a
+          class="site-logo"
+          href="/"
+          aria-label="A Fé Primitiva - Página inicial"
+        >
           <img
             src={logo.src}
             alt="A Fé Primitiva"
@@ -33,6 +37,7 @@ const {
         </a>
 
         <nav class="main-nav" aria-label="Navegação principal">
+
           <a href="/">
             Início
           </a>
@@ -60,6 +65,7 @@ const {
           <a href="/envie-suas-duvidas/">
             Envie suas Dúvidas
           </a>
+
         </nav>
 
       </div>
@@ -74,6 +80,7 @@ const {
 
         <div class="footer-brand">
           <strong>A Fé Primitiva</strong>
+
           <p>
             Estudos das Escrituras em busca da Verdade.
           </p>
