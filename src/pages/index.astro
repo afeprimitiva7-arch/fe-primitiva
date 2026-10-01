@@ -73,39 +73,42 @@ import bannerInicio from '../assets/banner-inicio.jpg.jpg';
 
       <div class="study-cards">
 
-        <a href="/estudos-biblicos/deus/" class="study-card">
+        <a
+          href="/estudos-doutrinarios/DEUS/"
+          class="study-card"
+        >
           <h3>DEUS</h3>
           <p>
             O conhecimento de DEUS segundo as Escrituras.
           </p>
         </a>
 
-        <a href="/estudos-biblicos/o-messias/" class="study-card">
+        <div class="study-card">
           <h3>O Messias</h3>
           <p>
             Estudos sobre Jesus, o Messias prometido nas Escrituras.
           </p>
-        </a>
+        </div>
 
-        <a href="/estudos-biblicos/o-espirito-santo/" class="study-card">
+        <div class="study-card">
           <h3>O Espírito Santo</h3>
           <p>
             O Espírito de DEUS e sua atuação segundo a Bíblia.
           </p>
-        </a>
+        </div>
 
-        <a href="/estudos-biblicos/as-escrituras/" class="study-card">
+        <div class="study-card">
           <h3>As Escrituras</h3>
           <p>
             Estudos sobre a Palavra de DEUS e sua autoridade.
           </p>
-        </a>
+        </div>
 
       </div>
 
 
       <div class="studies-link">
-        <a href="/estudos-biblicos/">
+        <a href="/estudos-doutrinarios/">
           Ver todos os estudos →
         </a>
       </div>
@@ -127,7 +130,7 @@ import bannerInicio from '../assets/banner-inicio.jpg.jpg';
           Escrituras neste site.
         </p>
 
-        <a href="/metodo-interpretativo/">
+        <a href="/nosso-metodo/">
           Conhecer o método →
         </a>
 
@@ -322,3 +325,17 @@ import bannerInicio from '../assets/banner-inicio.jpg.jpg';
 
 </style>
 ```
+
+### O que foi corrigido
+
+* **DEUS** → `/estudos-doutrinarios/DEUS/`
+* **Ver todos os estudos** → `/estudos-doutrinarios/`
+* **Método Interpretativo** → `/nosso-metodo/`
+* Mantido o banner `banner-inicio.jpg.jpg`.
+* Mantida a apresentação.
+* Mantidos os **4 cards** e o layout em grade.
+* Os três cards que ainda não têm páginas correspondentes ficaram como `div`, evitando links quebrados.
+* Mantida a responsividade para celular.
+* Nenhuma alteração foi feita no CSS que controla a aparência dos cards.
+
+**Importante:** isso preserva os quadrados/cards estruturalmente. A aparência das bordas, fundo etc. depende também do `global.css`.
