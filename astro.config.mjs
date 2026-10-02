@@ -1,4 +1,3 @@
-```js
 import { defineConfig } from 'astro/config';
 import cloudflare from '@astrojs/cloudflare';
 
