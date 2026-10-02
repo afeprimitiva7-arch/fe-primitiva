@@ -1,8 +1,15 @@
+```js
 import { defineConfig } from 'astro/config';
 import cloudflare from '@astrojs/cloudflare';
 
 export default defineConfig({
   output: 'static',
   adapter: cloudflare(),
-  site: 'https://afeprimitiva.blog'
+  site: 'https://afeprimitiva.blog',
+
+  vite: {
+    build: {
+      cssMinify: false
+    }
+  }
 });
