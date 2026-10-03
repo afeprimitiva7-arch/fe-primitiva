@@ -467,28 +467,6 @@ a:hover {
    ========================================================= */
 
 .study-page-card {
-  display: flex;
-  align-items: flex-start;
-
-  gap: 1.25rem;
-
-  min-height: 90px;
-
-  padding: 1.5rem;
-
-  background: var(--bg-paper);
-
-  border: 1px solid var(--border);
-
-  color: var(--text-main) !important;
-  text-decoration: none;
-
-  transition:
-    transform 0.2s ease,
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
-}
-.study-page-card {
   position: relative;
 
   display: flex;
@@ -511,6 +489,11 @@ a:hover {
     box-shadow 0.2s ease;
 }
 
+
+/* =========================================================
+   QUADRADINHO DECORATIVO
+   ========================================================= */
+
 .study-page-card::before {
   content: "";
 
@@ -529,6 +512,11 @@ a:hover {
   box-sizing: border-box;
 }
 
+
+/* =========================================================
+   EFEITO DOS CARDS
+   ========================================================= */
+
 .study-page-card:hover {
   transform: translateY(-3px);
 
@@ -536,12 +524,6 @@ a:hover {
 
   box-shadow: 0 8px 25px rgba(60, 48, 30, 0.08);
 }
-}
-
-
-/* =========================================================
-   QUADRADINHO NUMERADO
-   ========================================================= */
 
 .study-page-card h2 {
   margin: 0;
@@ -709,11 +691,12 @@ a:hover {
   }
 
   .study-page-card {
-    padding: 1.25rem;
-    gap: 1rem;
+    padding: 1.25rem 1.25rem 1.25rem 4.25rem;
   }
 
-  .study-number {
+  .study-page-card::before {
+    left: 1.25rem;
+
     width: 34px;
     height: 34px;
   }
@@ -739,51 +722,17 @@ a:hover {
   .study-page-header h1 {
     font-size: 2.2rem;
   }
-.study-page-card {
-  position: relative;
 
-  display: flex;
-  align-items: center;
+  .study-page-card {
+    padding-left: 4rem;
+  }
 
-  min-height: 90px;
+  .study-page-card::before {
+    left: 1rem;
 
-  padding: 1.5rem 1.5rem 1.5rem 4.5rem;
+    width: 32px;
+    height: 32px;
+  }
 
-  background: var(--bg-paper);
-
-  border: 1px solid var(--border);
-
-  color: var(--text-main) !important;
-  text-decoration: none;
-
-  transition:
-    transform 0.2s ease,
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
 }
-
-.study-page-card::before {
-  content: "";
-
-  position: absolute;
-
-  left: 1.5rem;
-  top: 50%;
-
-  width: 38px;
-  height: 38px;
-
-  border: 1px solid var(--gold);
-
-  transform: translateY(-50%);
-
-  box-sizing: border-box;
-}
-
-.study-page-card:hover {
-  transform: translateY(-3px);
-
-  border-color: var(--gold);
-
-  box-shadow: 0 8px 25px rgba(60, 48, 30, 0.08);
-}
+```
