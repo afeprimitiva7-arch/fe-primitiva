@@ -1,7 +1,6 @@
 ```astro
 ---
 import Layout from '../layouts/Layout.astro';
-
 import bannerInicio from '../assets/banner-inicio.jpg.jpg';
 ---
 
@@ -19,7 +18,6 @@ import bannerInicio from '../assets/banner-inicio.jpg.jpg';
         alt="A Fé Primitiva"
       />
     </section>
-
 
     <!-- APRESENTAÇÃO -->
     <section class="intro-section">
@@ -54,7 +52,6 @@ import bannerInicio from '../assets/banner-inicio.jpg.jpg';
 
     </section>
 
-
     <!-- ESTUDOS -->
     <section class="studies-section">
 
@@ -69,7 +66,6 @@ import bannerInicio from '../assets/banner-inicio.jpg.jpg';
         </p>
 
       </div>
-
 
       <div class="study-cards">
 
@@ -106,7 +102,6 @@ import bannerInicio from '../assets/banner-inicio.jpg.jpg';
 
       </div>
 
-
       <div class="studies-link">
         <a href="/estudos-doutrinarios/">
           Ver todos os estudos →
@@ -114,7 +109,6 @@ import bannerInicio from '../assets/banner-inicio.jpg.jpg';
       </div>
 
     </section>
-
 
     <!-- MÉTODO -->
     <section class="method-section">
@@ -142,12 +136,7 @@ import bannerInicio from '../assets/banner-inicio.jpg.jpg';
 
 </Layout>
 
-
 <style>
-
-  /* =========================
-     BANNER
-  ========================= */
 
   .hero-banner {
     width: 100%;
@@ -162,11 +151,6 @@ import bannerInicio from '../assets/banner-inicio.jpg.jpg';
     max-width: 1376px;
     margin: 0 auto;
   }
-
-
-  /* =========================
-     APRESENTAÇÃO
-  ========================= */
 
   .intro-section {
     padding: 70px 20px;
@@ -192,13 +176,9 @@ import bannerInicio from '../assets/banner-inicio.jpg.jpg';
     font-weight: 500;
   }
 
-
-  /* =========================
-     ESTUDOS
-  ========================= */
-
   .studies-section {
     padding: 70px 20px;
+    border-top: 1px solid var(--border);
   }
 
   .section-heading {
@@ -210,10 +190,12 @@ import bannerInicio from '../assets/banner-inicio.jpg.jpg';
   .section-symbol {
     display: block;
     margin-bottom: 10px;
+    color: var(--gold);
     font-size: 1.4rem;
   }
 
   .section-heading h2 {
+    margin-top: 0;
     margin-bottom: 12px;
   }
 
@@ -232,15 +214,21 @@ import bannerInicio from '../assets/banner-inicio.jpg.jpg';
   .study-card {
     display: block;
     padding: 28px 22px;
-    text-decoration: none;
+    background: var(--bg-paper);
+    border: 1px solid var(--border);
     border-radius: 10px;
+    color: var(--text-main);
+    text-decoration: none;
     transition:
       transform 0.2s ease,
+      border-color 0.2s ease,
       box-shadow 0.2s ease;
   }
 
   .study-card:hover {
     transform: translateY(-4px);
+    border-color: var(--gold);
+    box-shadow: 0 8px 25px rgba(60, 48, 30, 0.08);
   }
 
   .study-card h3 {
@@ -250,6 +238,7 @@ import bannerInicio from '../assets/banner-inicio.jpg.jpg';
 
   .study-card p {
     margin: 0;
+    color: var(--text-soft);
     line-height: 1.6;
   }
 
@@ -263,14 +252,10 @@ import bannerInicio from '../assets/banner-inicio.jpg.jpg';
     font-weight: 600;
   }
 
-
-  /* =========================
-     MÉTODO
-  ========================= */
-
   .method-section {
     padding: 70px 20px;
     text-align: center;
+    border-top: 1px solid var(--border);
   }
 
   .method-content {
@@ -279,23 +264,19 @@ import bannerInicio from '../assets/banner-inicio.jpg.jpg';
   }
 
   .method-content h2 {
+    margin-top: 0;
     margin-bottom: 15px;
   }
 
   .method-content p {
     line-height: 1.7;
-    margin-bottom: 25px;
+    margin: 0 auto 25px;
   }
 
   .method-content a {
     text-decoration: none;
     font-weight: 600;
   }
-
-
-  /* =========================
-     CELULAR
-  ========================= */
 
   @media (max-width: 900px) {
 
@@ -325,17 +306,3 @@ import bannerInicio from '../assets/banner-inicio.jpg.jpg';
 
 </style>
 ```
-
-### O que foi corrigido
-
-* **DEUS** → `/estudos-doutrinarios/DEUS/`
-* **Ver todos os estudos** → `/estudos-doutrinarios/`
-* **Método Interpretativo** → `/nosso-metodo/`
-* Mantido o banner `banner-inicio.jpg.jpg`.
-* Mantida a apresentação.
-* Mantidos os **4 cards** e o layout em grade.
-* Os três cards que ainda não têm páginas correspondentes ficaram como `div`, evitando links quebrados.
-* Mantida a responsividade para celular.
-* Nenhuma alteração foi feita no CSS que controla a aparência dos cards.
-
-**Importante:** isso preserva os quadrados/cards estruturalmente. A aparência das bordas, fundo etc. depende também do `global.css`.
