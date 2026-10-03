@@ -718,4 +718,6 @@ a:hover {
   }
 
 }
-
+.study-page-card-content {
+  flex: 1;
+}
