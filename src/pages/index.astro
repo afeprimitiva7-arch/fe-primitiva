@@ -52,86 +52,6 @@ import bannerInicio from '../assets/banner-inicio.jpg.jpg';
 
     </section>
 
-    <!-- ESTUDOS -->
-    <section class="studies-section">
-
-      <div class="section-heading">
-
-        <span class="section-symbol">✦</span>
-
-        <h2>Estudos Bíblicos</h2>
-
-        <p>
-          Conheça os principais temas que estudamos à luz das Escrituras.
-        </p>
-
-      </div>
-
-      <div class="study-cards">
-
-        <a
-          href="/estudos-doutrinarios/DEUS/"
-          class="study-card"
-        >
-          <h3>DEUS</h3>
-          <p>
-            O conhecimento de DEUS segundo as Escrituras.
-          </p>
-        </a>
-
-        <div class="study-card">
-          <h3>O Messias</h3>
-          <p>
-            Estudos sobre Jesus, o Messias prometido nas Escrituras.
-          </p>
-        </div>
-
-        <div class="study-card">
-          <h3>O Espírito Santo</h3>
-          <p>
-            O Espírito de DEUS e sua atuação segundo a Bíblia.
-          </p>
-        </div>
-
-        <div class="study-card">
-          <h3>As Escrituras</h3>
-          <p>
-            Estudos sobre a Palavra de DEUS e sua autoridade.
-          </p>
-        </div>
-
-      </div>
-
-      <div class="studies-link">
-        <a href="/estudos-doutrinarios/">
-          Ver todos os estudos →
-        </a>
-      </div>
-
-    </section>
-
-    <!-- MÉTODO -->
-    <section class="method-section">
-
-      <div class="method-content">
-
-        <span class="section-symbol">✦</span>
-
-        <h2>Método Interpretativo</h2>
-
-        <p>
-          Conheça os princípios utilizados no estudo e na interpretação das
-          Escrituras neste site.
-        </p>
-
-        <a href="/nosso-metodo/">
-          Conhecer o método →
-        </a>
-
-      </div>
-
-    </section>
-
   </main>
 
 </Layout>
@@ -154,20 +74,25 @@ import bannerInicio from '../assets/banner-inicio.jpg.jpg';
 
   .intro-section {
     padding: 70px 20px;
+    text-align: center;
   }
 
   .intro-content {
+    width: 100%;
     max-width: 900px;
     margin: 0 auto;
     text-align: center;
   }
 
   .intro-content h1 {
-    margin-bottom: 25px;
+    margin: 0 auto 25px;
+    text-align: center;
   }
 
   .intro-content p {
+    max-width: 900px;
     margin: 0 auto 18px;
+    text-align: center;
     line-height: 1.8;
   }
 
@@ -176,133 +101,58 @@ import bannerInicio from '../assets/banner-inicio.jpg.jpg';
     font-weight: 500;
   }
 
-  .studies-section {
-    padding: 70px 20px;
-    border-top: 1px solid var(--border);
-  }
-
-  .section-heading {
-    max-width: 850px;
-    margin: 0 auto 40px;
-    text-align: center;
-  }
-
-  .section-symbol {
-    display: block;
-    margin-bottom: 10px;
-    color: var(--gold);
-    font-size: 1.4rem;
-  }
-
-  .section-heading h2 {
-    margin-top: 0;
-    margin-bottom: 12px;
-  }
-
-  .section-heading p {
-    line-height: 1.7;
-  }
-
-  .study-cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 22px;
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-
-  .study-card {
-    display: block;
-    padding: 28px 22px;
-    background: var(--bg-paper);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    color: var(--text-main);
-    text-decoration: none;
-    transition:
-      transform 0.2s ease,
-      border-color 0.2s ease,
-      box-shadow 0.2s ease;
-  }
-
-  .study-card:hover {
-    transform: translateY(-4px);
-    border-color: var(--gold);
-    box-shadow: 0 8px 25px rgba(60, 48, 30, 0.08);
-  }
-
-  .study-card h3 {
-    margin-top: 0;
-    margin-bottom: 12px;
-  }
-
-  .study-card p {
-    margin: 0;
-    color: var(--text-soft);
-    line-height: 1.6;
-  }
-
-  .studies-link {
-    text-align: center;
-    margin-top: 35px;
-  }
-
-  .studies-link a {
-    text-decoration: none;
-    font-weight: 600;
-  }
-
-  .method-section {
-    padding: 70px 20px;
-    text-align: center;
-    border-top: 1px solid var(--border);
-  }
-
-  .method-content {
-    max-width: 750px;
-    margin: 0 auto;
-  }
-
-  .method-content h2 {
-    margin-top: 0;
-    margin-bottom: 15px;
-  }
-
-  .method-content p {
-    line-height: 1.7;
-    margin: 0 auto 25px;
-  }
-
-  .method-content a {
-    text-decoration: none;
-    font-weight: 600;
-  }
-
-  @media (max-width: 900px) {
-
-    .study-cards {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-  }
-
   @media (max-width: 600px) {
 
     .hero-banner img {
       width: 100%;
     }
 
-    .intro-section,
-    .studies-section,
-    .method-section {
+    .intro-section {
       padding: 50px 18px;
-    }
-
-    .study-cards {
-      grid-template-columns: 1fr;
     }
 
   }
 
 </style>
 ```
+
+### Alteração do tamanho do menu
+
+No `global.css`, altere **somente** estas duas ocorrências:
+
+**Computador:**
+
+```css
+font-size: 1.04rem;
+```
+
+no lugar de:
+
+```css
+font-size: 1.3rem;
+```
+
+**Celular:**
+
+```css
+font-size: 0.94rem;
+```
+
+no lugar de:
+
+```css
+font-size: 1.17rem;
+```
+
+E, no último `@media`, use:
+
+```css
+font-size: 0.86rem;
+```
+
+no lugar de:
+
+```css
+font-size: 1.07rem;
+```
+
